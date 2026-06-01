@@ -7,23 +7,50 @@ To efficiently process large-scale transcriptomic data and identify potential an
 
 ##  Pipeline Workflow
 
-Input Data
-Raw transcriptomic sequences (FASTA format)
-ORF Prediction
-Tool: TransDecoder
-Extraction of candidate coding regions from transcripts
-Protein Filtering
-Removal of incomplete and low-quality sequences
-Selection of biologically relevant protein sequences
-Redundancy Reduction
-Tools: CD-HIT / MMseqs2
-Clustering similar sequences to eliminate redundancy
-Improves computational efficiency and dataset quality
-AMP Prediction
-Tool: AMPEP
-Classification of peptides based on antimicrobial properties
-Output
-High-confidence AMP candidate sequences for further validation  
+The AMP discovery pipeline was designed to identify novel antimicrobial peptides from transcriptomic datasets and evaluate their therapeutic potential against Sortase A.
+
+Step 1: Transcriptome Data Collection
+
+Raw transcriptomic sequences were obtained from publicly available databases and used as the starting dataset for analysis.
+
+Step 2: ORF Prediction
+
+TransDecoder was employed to identify coding regions and generate candidate peptide sequences from transcriptomic data.
+
+Step 3: Redundancy Reduction
+
+CD-HIT was used to cluster similar sequences and remove redundancy, ensuring a non-redundant peptide dataset.
+
+Step 4: AMP Prediction
+
+Candidate peptides were screened using antimicrobial peptide prediction tools to identify sequences with potential antimicrobial activity.
+
+Step 5: Physicochemical Characterization
+
+Selected peptides were evaluated for molecular weight, isoelectric point, hydrophobicity, stability, and other physicochemical properties.
+
+Step 6: Toxicity Assessment
+
+ToxinPred was used to eliminate potentially toxic peptides and retain safe candidates for further investigation.
+
+Step 7: Structure Prediction
+
+Three-dimensional peptide structures were generated using AlphaFold to understand structural features and facilitate docking studies.
+
+Step 8: Molecular Docking
+
+The predicted peptide structures were docked against Sortase A using HADDOCK to evaluate binding affinity and interaction patterns.
+
+Step 9: Structural Validation and Visualization
+
+Ramachandran plot analysis and PyMOL visualization were performed to validate and interpret peptide–protein interactions.
+
+Final Outcome
+
+Five high-confidence antimicrobial peptide candidates (Pep4, Pep8, Pep20, Pep25, and Pep80) were identified and evaluated through computational screening, structural modeling, and docking analyses.
+
+![AMP Discovery Workflow](workflow/methodology_workflow.png)
+
 
 ---
 
