@@ -28,10 +28,16 @@ High-confidence AMP candidate sequences for further validation
 ---
 
 ##  Tools Used
-- Galaxy
-- TransDecoder
-- MMseqs2
-- AMPEP
+
+| Analysis | Tool |
+|-----------|---------|
+| ORF Prediction | TransDecoder |
+| Clustering | CD-HIT |
+| AMP Prediction | AMP Scanner |
+| Toxicity | ToxinPred |
+| Structure Prediction | AlphaFold |
+| Docking | HADDOCK |
+| Visualization | PyMOL |
 
 ---
 
@@ -48,6 +54,19 @@ High-confidence AMP candidate sequences for further validation
 - Automation using Python scripts  
 - Deployment on cloud platforms (AWS)
 
+## Top Docking Results
+
+| Candidate | HADDOCK Score |
+|------------|------------|
+| Pep20 | -78.9 |
+| Pep4 | -76.2 |
+| Pep25 | -74.3 |
+| Pep80 | -72.1 |
+| Pep8 | -70.5 |
+
+## Skills Demonstrated
+
+Bioinformatics • Transcriptomics • AMP Discovery • Structural Biology • Molecular Docking • Python • Biopython • HADDOCK • PyMOL
 ---
 
 ## 👩‍💻 Author
